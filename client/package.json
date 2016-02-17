@@ -19,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/DanielDanteDosSantosViana/MonitoradorWebServices/issues"
   },
-  "homepage": "https://github.com/DanielDanteDosSantosViana/MonitoradorWebServices#readme"
+  "homepage": "https://github.com/DanielDanteDosSantosViana/MonitoradorWebServices#readme",
+  "dependencies": {
+    "mongojs": "^2.3.0",
+    "mongoose": "^4.4.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
 }
