@@ -1,10 +1,10 @@
 {
-  "name": "agent",
+  "name": "mweba",
   "version": "1.0.0",
   "description": "Agent responsável por recuperar as informações da aplicação a ser visualizada",
   "main": "index.js",
   "scripts": {
-    "start": "node ./app",
+    "start": "node ./bin/mweba",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +22,10 @@
   },
   "homepage": "https://github.com/DanielDanteDosSantosViana/MonitoradorWebServices#readme",
   "dependencies": {
+    "JSONStream": "^1.1.1",
+    "crypto-js": "^3.1.6",
+    "get-stdin": "^5.0.1",
+    "minimist": "^1.2.0",
     "mongojs": "^2.3.0",
     "mongoose": "^4.4.3"
   },
@@ -31,7 +35,6 @@
   },
   "preferGlobal": true,
   "bin": {
-    "mweba": "app.js"
+    "mweba": "./bin/mweba"
   }
-
 }
