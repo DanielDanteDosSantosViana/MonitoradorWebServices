@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "port": "5000",
+    "ip": "localhost",
+    "user":"",
+    "senha":""
+  }
+}
