@@ -1,7 +1,0 @@
-#!/usr/bin/env node
-app = require('../app');
-var argv = require('minimist')(process.argv.slice(2));
-app(argv);
-
-
-
