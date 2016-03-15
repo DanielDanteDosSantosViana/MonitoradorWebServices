@@ -1,8 +1,12 @@
 'use strict';
 
 const program = require('commander');
+var acao = require('../action');
+
+
 
 function commands(argv){
+
   help();
   init();
 
@@ -10,7 +14,6 @@ function commands(argv){
 }
 
 var help = function(){
-
   program
   .command('help')
   .description('help application');
@@ -21,14 +24,13 @@ var init = function(){
   .version('0.0.1')
   .command('init')
   .description('boot application settings')
-  .option('-pw, --password','set password')
-  .option('-usr, --user','set user');
+  .action(acao.init);
 }
 
 module.exports = {
   process: function (argv) {
     return commands(argv);
-  },
+  }
 };
 
 
