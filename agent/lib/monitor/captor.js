@@ -1,5 +1,4 @@
 
-
 function captor(param ,cliente){
   const spawn = require('child_process').spawn;
   const tcpdump = spawn('tcpdump', ['-i', param.i,  'tcp port http']);

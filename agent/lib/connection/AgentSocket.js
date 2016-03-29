@@ -3,13 +3,13 @@ const net = require('net');
 const JSONStream = require('JSONStream');
 
 
-function AgentSocket(){
+function agentSocket(){
   this._agentSocket = null;
   this._protocolo = require('../protocolo/protocolo');
 }
 
 
-AgentSocket.prototype.connect = function(properties, callback){
+agentSocket.prototype.connect = function(properties, callback){
       console.log(properties.properties.port);
 
   this._agentSocket = net.connect(properties.properties.port ,properties.properties.ip,() => {
@@ -25,7 +25,7 @@ AgentSocket.prototype.connect = function(properties, callback){
 
 };
 
-AgentSocket.prototype.send = function(data,callback){
+agentSocket.prototype.send = function(data,callback){
 
   this._agentSocket.write(JSONStream.stringify(data));
   this._agentSocket.end();
@@ -33,7 +33,7 @@ AgentSocket.prototype.send = function(data,callback){
 };
 
 
-AgentSocket.prototype._dataReceiver = function(callback){
+agentSocket.prototype._dataReceiver = function(callback){
   this._agentSocket.on('data', (data) => {
   this._agentSocket.end();
   callback(data);
@@ -41,7 +41,7 @@ AgentSocket.prototype._dataReceiver = function(callback){
   });
 }
 
-AgentSocket.prototype._disconnect = function(){
+agentSocket.prototype._disconnect = function(){
   this._agentSocket.on('end', () => {
   console.log('disconnected from server');
   });
@@ -49,7 +49,7 @@ AgentSocket.prototype._disconnect = function(){
 }
 
 module.exports = function() {
-  return new AgentSocket();
+  return new agentSocket();
 };
 
 

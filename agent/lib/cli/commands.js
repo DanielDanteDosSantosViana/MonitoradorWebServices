@@ -3,8 +3,6 @@
 const program = require('commander');
 var acao = require('../action');
 
-
-
 function commands(argv){
 
   help();
