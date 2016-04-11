@@ -1,7 +1,3 @@
-var agenteSocket = require('./agenteSocket');
+var agentSocket = require('./agentSocket')();
 
-module.exports = {
-  connection: function () {
-    return agenteSocket();
-  }
-};
+module.exports = agentSocket;

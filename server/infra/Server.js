@@ -1,4 +1,5 @@
 const net = require('net');
+
 var gerenciador = require('../infra/Gerenciador.js')();
 
 
@@ -9,11 +10,9 @@ var Server = function(propertiesServer){
 Server.prototype.start = function(){
   this._server = net.createServer(function (c) {
                 c.on('data', function (data) {
-            //receiver(data,function(err,msg){
-            console.log(data);
+            var json = JSON.parse(data.toString('utf8'));
+            console.log(json.usuario);
           });
-
-
   }).listen(this.properties.port);
   console.log("MWeb-Server(version 1.0.0) Online .\n");
 
