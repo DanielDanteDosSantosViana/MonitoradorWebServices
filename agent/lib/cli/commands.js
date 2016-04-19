@@ -18,9 +18,11 @@ var help = function(){
 }
 
 var init = function(){
+  var email,senha;
+
   program
   .version('0.0.1')
-  .command('init')
+  .command('init <email> <senha>')
   .description('boot application settings')
   .action(acao.init);
 }

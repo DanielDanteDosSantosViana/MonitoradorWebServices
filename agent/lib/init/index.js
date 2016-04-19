@@ -1,7 +1,7 @@
 var init = require('./init');
 
 module.exports = {
-  start: function () {
-    return init();
+  start: function (email,senha) {
+    return init(email,senha);
   }
 };

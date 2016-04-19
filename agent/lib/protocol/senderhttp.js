@@ -1,5 +1,4 @@
 var unirest = require('unirest');
-var propertie = require('../init/properties');
 
 var method = {
   get: get,
@@ -7,16 +6,16 @@ var method = {
 };
 
 
-function senderhttp(type,msg,callback){
-   method[type](msg, function(error,msg){
-      console.log(msg);
+function senderhttp(type,msg,url,callback_ok,callback_error){
+   method[type](msg,url,function(error,msg){
+      callback_error(error,msg);
    },function(msg,response){
-      callback(response);
+      callback_ok(response);
    });
 }
 
-function post(data,processo_error, processo_ok){
-  unirest.post(propertie.properties.url_server)
+function post(data,url,processo_error, processo_ok){
+  unirest.post(url)
   .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
   .send({requisicao:data})
   .end(function (response) {
@@ -27,7 +26,7 @@ function post(data,processo_error, processo_ok){
   });
 }
 
-function get(data,processo_error, processo_ok){
+function get(data,url,processo_error, processo_ok){
   unirest.get(url)
   .end(function (response) {
     if(response.status!=200){

@@ -1,6 +1,6 @@
 
 module.exports = {
-  init: function () {
-    return require('../init').start();
+  init: function (email,senha) {
+    return require('../init').start(email,senha);
   }
 };
