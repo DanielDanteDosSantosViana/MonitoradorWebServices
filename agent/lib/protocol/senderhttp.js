@@ -17,12 +17,13 @@ function senderhttp(type,msg,url,callback_ok,callback_error){
 function post(data,url,processo_error, processo_ok){
   unirest.post(url)
   .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
-  .send({requisicao:data})
+  .send(data)
   .end(function (response) {
     if(response.status!=200){
       processo_error("error","Ocorreu um error ao tentar se conectar :"+response.error);
-     }
+    }else{
      processo_ok("status code: 200" ,response);
+    }
   });
 }
 

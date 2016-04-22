@@ -4,6 +4,6 @@
     "ip": "localhost",
     "user":"",
     "senha":"",
-    "url_server_authentication":"http://localhost:8080/movie_store/teste"
+    "url_server_authentication":"http://localhost:8080/mwebauth/authentication"
   }
 }

@@ -5,14 +5,58 @@ var fs = require('fs'),
 
 
 function init(email,senha){
-  utils.log("info","iniciando as configurações...");
-  var data = function(email,senha){
+
+  var configUser = function(email,senha,token){
     this.email = email,
     this.senha = senha;
+    this.token = token;
   }
 
+  utils.log("info","Init...");
+  utils.log("info","Autenticando usuário...");
+
+  utils.config.existsFile(function(exists){
+
+      if(!exists){
+        protocol.authentication(new configUser(email,senha,null),function(response){
+            utils.log("status","Usuário autenticado[OK]");
+            utils.log("info","Gerando arquivo de configuração...");
+            var token = response.body.Token;
+
+            utils.log("info",token);
+            utils.config.writeFileConfig(JSON.stringify(new configUser(email,senha,token)),function(err,msg){
+                    utils.log("status","Arquivo Gerado[OK]");
+            });
+          }, function(error,msg){
+              utils.log("error",msg);
+          });
+      }else{
+             utils.log("error","Usuário já autenticado");
+      }
+  });
+
+
+
+
+
+ // utils.log("status","Configurações feitas com sucesso[OK]");
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
   utils.log("info","gerando arquivo de configurações...");
-  utils.writeConfig(JSON.stringify(new data(email,senha)),function(error,msg){
+  utils.config.writeFileConfig(JSON.stringify(new data(email,senha)),
+    function(error,msg){
     utils.log("info",error);
 
     if(error!=null){
@@ -36,6 +80,7 @@ function init(email,senha){
         });
    }
   });
+  */
 };
 
 
