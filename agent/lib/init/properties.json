@@ -1,9 +1,0 @@
-{
-  "properties": {
-    "port": "5000",
-    "ip": "localhost",
-    "user":"",
-    "senha":"",
-    "url_server_authentication":"http://localhost:8080/mwebauth/authentication"
-  }
-}

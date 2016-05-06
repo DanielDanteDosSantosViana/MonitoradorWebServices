@@ -1,8 +1,5 @@
-var fs = require('fs'),
-  utils = require('../utils'),
+var utils = require('../utils'),
   protocol = require('../protocol')
-  monitor = require('../monitor');
-
 
 function init(email,senha){
 
