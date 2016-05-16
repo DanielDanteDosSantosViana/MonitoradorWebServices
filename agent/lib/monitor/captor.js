@@ -4,7 +4,6 @@ function captor(callback){
 
   const httpry = spawn('httpry', [ '-i','any']);
 
-
   httpry.stdout.setEncoding('utf8');
 
   httpry.stdout.on('data',

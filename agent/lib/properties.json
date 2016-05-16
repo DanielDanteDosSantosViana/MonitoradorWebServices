@@ -3,6 +3,8 @@
     "port": "5000",
     "ip": "localhost",
     "url_server_authentication":"http://localhost:8080/mwebauth/authentication",
-    "url_server_create_user":"http://localhost:8080/mwebauth/user"
+    "url_server_create_user":"http://localhost:8080/mwebauth/user",
+    "url_server_capturedPackets":"http://localhost:8080/mwebauth/receiver",
+    "url_server_validate_token":"http://localhost:8080/mwebauth/validateToken"
   }
 }

@@ -8,5 +8,8 @@ module.exports = {
   },
   start: function () {
     return require('../start').start();
+  },
+  reset: function () {
+    return require('../reset').start();
   }
 };

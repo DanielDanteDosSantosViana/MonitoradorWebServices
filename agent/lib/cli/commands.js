@@ -10,6 +10,8 @@ function commands(argv){
   init();
   create();
   start();
+  reset();
+
   return program;
 }
 
@@ -43,6 +45,13 @@ var start = function(){
   .command('start')
   .description('start application')
   .action(acao.start);
+}
+
+var reset = function(){
+  program
+  .command('reset')
+  .description('reset user and application')
+  .action(acao.reset);
 }
 
 module.exports = {

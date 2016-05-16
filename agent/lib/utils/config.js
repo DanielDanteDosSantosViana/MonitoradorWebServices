@@ -6,6 +6,8 @@ function config(){
   this.readFileConfig = readFileConfig;
   this.writeFileConfig = writeFileConfig;
   this.existsFile = existsFile;
+  this.deleteFileConfig = deleteFileConfig;
+
 }
 
 
@@ -14,16 +16,30 @@ function readFileConfig(callback_error,callback_ok){
     if(exists){
       fs.readFile(process.cwd()+"/.mweba.json",function (err,data) {
         if (err!=null) {
-          console.log("error"+err)
           callback_error(err);
         }else{
-          console.log("ok"+data)
           callback_ok(data);
 
         }
       });
     }else{
        log("fail","não foi possível ler o arquivo de configuração. Acesse o help do sistema para informações de geração do arquivo de configuração 'mweba -h' ");
+    }
+  });
+}
+
+function deleteFileConfig(callback_error,callback_ok){
+  fs.exists(process.cwd()+"/.mweba.json", function (exists) {
+    if(exists){
+        fs.unlink(process.cwd()+"/.mweba.json",function(err){
+            if(!err){
+             callback_ok("Deletado com sucesso!");
+            }else{
+             callback_error(err);
+            }
+       });
+    }else{
+       log("fail","não foi possível apagar o arquivo de configuração, pois ele não existe! Acesse o help do sistema para informações de geração do arquivo de configuração 'mweba -h' ");
     }
   });
 }

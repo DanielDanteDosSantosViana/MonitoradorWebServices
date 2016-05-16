@@ -1,6 +1,10 @@
 var authenticator = require('./authenticator');
 var senderhttp = require('./senderhttp');
 var creator = require('./creatoruser');
+var senderCapturedPackets = require('./capturedPackage');
+var validateToken = require('./validateToken');
+
+
 
 
 module.exports = {
@@ -15,4 +19,11 @@ module.exports = {
     return creator(data,callback_error,callback_ok);
   },
 
+  senderCapturedPackets: function (data,callback_error,callback_ok) {
+    return senderCapturedPackets(data,callback_error,callback_ok);
+  },
+
+  validateToken: function (data,callback_error,callback_ok) {
+    return validateToken(data,callback_error,callback_ok);
+  },
 };
