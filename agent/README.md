@@ -1,9 +1,9 @@
 # MWEBA - Agente do Monitorador WEB 
 
-Para utiliar o Agente é necessário ter instalado httpry(https://github.com/jbittel/httpry) no local de instalação do Agente
+Para utilizar o MWEBA é necessário ter instalado httpry(https://github.com/jbittel/httpry) .
 
 
-# Installation
+# Instalação
 
 Recomendo a instalação global do MWEBA:
 ```
@@ -14,19 +14,19 @@ O MWEBA estará instalado no seu System Path.
 
 # Utilização
 
-Para a utilização do agente é ncessário a seguinte chamada na linha de comando 
+Para a utilização do MWEBA é ncessário a seguinte chamada na linha de comando 
 ```
     mweba [option]
 ```
 
 Para verificar as opções , use  os argumentos ` '-h' (or --help)` :
 ```
-    mweba -h
+    mweba -h ou mweba --help
 ```
 
-#Configuração
+#Configurações
 
-Para que o envio dos pacotes lidos sejam feitos é necessário modificar as urls de acesso no arquivo properties.json
+Definir o caminho do servidor que será enviado os pacotes no arquivo properties.json
 encontrado na raiz do projeto.
 
 #Info
