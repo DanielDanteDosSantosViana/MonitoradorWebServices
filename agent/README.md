@@ -30,6 +30,6 @@ Definir o caminho do servidor que será enviado os pacotes no arquivo properties
 encontrado na raiz do projeto.
 
 #Info
-Para informações de uso , acesse o help do programa.
+Email para contato : danielvianarj@gmail.com
 
 
