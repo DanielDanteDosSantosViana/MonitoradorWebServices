@@ -1,0 +1,29 @@
+{
+  "name": "mwebc",
+  "version": "1.0.0",
+  "description": "Cliente para mostrar os dados retornados do 'mweba' de uma forma apresentável ao usuário",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielDanteDosSantosViana/MonitoradorWebServices.git"
+  },
+  "keywords": [
+    "mwebc",
+    "sniffer",
+    "visualização",
+    "dados"
+  ],
+  "author": "Daniel Viana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielDanteDosSantosViana/MonitoradorWebServices/issues"
+  },
+  "homepage": "https://github.com/DanielDanteDosSantosViana/MonitoradorWebServices#readme"
+  "devDependencies": {
+      "electron-prebuilt": "^1.1.1"
+    }
+
+}
