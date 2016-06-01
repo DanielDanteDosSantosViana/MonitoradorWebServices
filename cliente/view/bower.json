@@ -1,0 +1,23 @@
+{
+  "name": "mwebc",
+  "homepage": "https://github.com/DanielDanteDosSantosViana/MonitoradorWebServices",
+  "authors": [
+    "DanielDanteDosSantosViana <danielvianarj@gmail.com>"
+  ],
+  "description": "Cliente para mostrar os dados http do mweba",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "electron"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

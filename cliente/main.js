@@ -5,9 +5,9 @@ const BrowserWindow = electron.BrowserWindow
 let mainWindow
 
 function createWindow () {
-  mainWindow = new BrowserWindow({width: 800, height: 600,frame: false })
-  mainWindow.loadURL('file://'+__dirname+'/view/index.html')
-  mainWindow.setMenu(null)
+  mainWindow = new BrowserWindow({width: 800, height: 600,frame: false,icon: __dirname + '/view/fonts/6_Primary_logo_on_color2_263x75.png' })
+  mainWindow.loadURL('file://'+__dirname+'/view/index.html');
+  mainWindow.setMenu(null);
   mainWindow.on('closed', function () {
   mainWindow = null
  })
