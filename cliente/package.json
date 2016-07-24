@@ -2,10 +2,9 @@
   "name": "mwebc",
   "version": "1.0.0",
   "description": "Cliente para mostrar os dados retornados do 'mweba' de uma forma apresentável ao usuário",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-    "start": "electron main.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +22,7 @@
     "url": "https://github.com/DanielDanteDosSantosViana/MonitoradorWebServices/issues"
   },
   "homepage": "https://github.com/DanielDanteDosSantosViana/MonitoradorWebServices#readme"
+,
   "devDependencies": {
       "electron-prebuilt": "^1.1.1"
     }
